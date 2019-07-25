@@ -1,0 +1,7 @@
+<h1>{{ organization.org_name }}</h1>
+
+<ul>
+{% for activity in organization.activity_set.all %}
+    <li>{{ activity.act_name }} -- {{ activity.description }}</li>
+{% endfor %}
+</ul>

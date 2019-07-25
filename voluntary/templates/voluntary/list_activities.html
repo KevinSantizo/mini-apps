@@ -1,0 +1,10 @@
+<h1>{{ organization.org_name }}</h1>
+
+<ul>
+{% for activity in organization.activity_set.all %}
+    <li>{{ activity.act_name }}</li>
+    <li>Start: {{ activity.start_time }} --- End: {{ activity.end_time }}</li>
+    <li>{{ activity.description }}</li>
+{% endfor %}
+    <a href="{% url 'voluntary:suscription_activity' %}">Suscription</a>
+</ul>

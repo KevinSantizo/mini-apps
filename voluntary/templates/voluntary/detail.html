@@ -1,0 +1,12 @@
+<h1 style="font-family: sans-serif; color:#F9310D;">ORGS</h1>
+
+<ul>
+{% for organization in object_list %}
+
+     <a href="{% url 'voluntary:list' organization.pk %}" style="font-family: sans-serif; font-size: 25px; color: #F9310D;"> {{ organization }}</a>
+     <li>{{ organization.description }}</li>
+     <li>{{ organization.address }}</li>
+    {% empty %}
+    <li>No ORGS found</li>
+{% endfor %}
+</ul>
